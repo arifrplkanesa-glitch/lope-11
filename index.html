@@ -1,2 +1,26 @@
- <p>modul 1:</p>
-    <a href="lope.py">lope</a>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You</title>
+</head>
+<body>
+
+    <h1>I Love You ❤️</h1>
+
+    <div id="hasil"></div>
+
+    <script>
+        fetch("http://127.0.0.1:5000/")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("hasil").innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Python tidak terhubung:", error);
+            });
+    </script>
+
+</body>
+</html>
